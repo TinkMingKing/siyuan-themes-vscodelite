@@ -1,0 +1,16 @@
+/* 超级块样式 */
+.protyle-wysiwyg [data-node-id].sb {
+    /* border-radius: 5px; */
+    padding: 10px;
+    /*background-color: whitesmoke;*/
+    box-shadow: 0 0 8px grey;
+}
+
+.protyle-wysiwyg [data-node-id].sb:hover {
+    /* 超级块鼠标悬停时显示边框 */
+    outline: 1px solid grey;
+  }
+
+  .protyle-wysiwyg [data-node-id].sb [data-node-id].sb {
+    margin: 5px;
+  }

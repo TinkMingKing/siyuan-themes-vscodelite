@@ -1,0 +1,16 @@
+/* .protyle-wysiwyg [data-node-id]:not(.code-block) > [contenteditable][spellcheck]:empty::after {
+    content: var(--custom-empty-p);
+    background-color: var(--b3-theme-on-surface);
+} */
+
+/* .protyle-wysiwyg [data-node-id] [spellcheck=false]:empty {
+    background-color: var(--b3-list-hover);
+} */
+
+/* .protyle-wysiwyg [data-node-id] [spellcheck=false]:focus:empty {
+    background-color: unset;
+} */
+
+/* .protyle-wysiwyg [data-node-id] [spellcheck=false]:empty {
+    background-color: var(--b3-list-hover);
+} */

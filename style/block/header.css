@@ -1,0 +1,43 @@
+/* 各级标题 */
+
+.protyle-wysiwyg [data-node-id].h1,
+.b3-typography h1 {
+  color: #202124;
+  border-left: 3px solid #202124;
+  padding-left: 9px;
+}
+
+.protyle-wysiwyg [data-node-id].h2,
+.b3-typography h2 {
+  color: #2E75B5;
+  border-left: 3px solid #2E75B5;
+  padding-left: 9px;
+}
+
+.protyle-wysiwyg [data-node-id].h3,
+.b3-typography h3 {
+  color: #BF9000;
+  border-left: 3px solid #BF9000;
+  padding-left: 9px;
+}
+
+.protyle-wysiwyg [data-node-id].h4,
+.b3-typography h4 {
+  color: #70AD47;
+  border-left: 3px solid #70AD47;
+  padding-left: 9px;
+}
+
+.protyle-wysiwyg [data-node-id].h5,
+.b3-typography h5 {
+  color: #E84C22;
+  border-left: 3px solid #E84C22;
+  padding-left: 9px;
+}
+
+.protyle-wysiwyg [data-node-id].h6,
+.b3-typography h6 {
+  color: #8064A2;
+  border-left: 3px solid #8064A2;
+  padding-left: 9px;
+}

@@ -1,0 +1,22 @@
+.protyle-wysiwyg[contenteditable=true] [data-node-id].li:hover>.list::before,
+.protyle-wysiwyg[contenteditable=true] [data-node-id].li:hover>[data-node-id]::before {
+    border-color: #76aeeea6;
+    transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/*
+ul.b3-list.b3-list--background ul {
+    margin-left: 18px;
+    border-left: 1px solid var(--b3-theme-background-light);
+}
+
+ul.b3-list.b3-list--background ul:hover{
+    margin-left: 18px;
+    border-left: 1px solid #5f636870;
+}
+
+.b3-list-item__toggle {
+    width: 16px;
+    justify-content: flex-end;
+    padding-left: unset !important;
+
+}*/

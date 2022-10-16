@@ -1,0 +1,16 @@
+/* 图片样式 */
+
+.b3-typography img, .protyle-wysiwyg img {
+  box-shadow: 0 0 8px grey;
+  border-radius: 4px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.b3-typography .img .protyle-action__title, .protyle-wysiwyg .img .protyle-action__title:not(:empty) {
+  width: 100%;
+  display: block;
+  font-size: 85%;
+  color: var(--b3-theme-on-surface);
+  margin-top: 0.5em;
+}

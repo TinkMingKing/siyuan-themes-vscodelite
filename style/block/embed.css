@@ -1,0 +1,10 @@
+/* 嵌入块 */
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+  margin: 1px;
+  border-left: unset;
+  outline: 2px solid #00000033;
+}
+
+.protyle-wysiwyg [data-node-id].li>[data-node-id][data-type=NodeBlockQueryEmbed]:before {
+  left: -18px;
+}

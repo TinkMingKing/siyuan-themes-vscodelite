@@ -1,0 +1,31 @@
+/*块引用样式*/
+
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]
+/*
+,
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref] 
+*/
+{
+  color: #f65b00;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::before {
+    content: "[[";
+    color: var(--b3-theme-primary-light);
+    /* font-weight: bold; */
+    font-size: larger;
+    /* letter-spacing: 1px; */
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]::after {
+    content: "]]";
+    color: var(--b3-theme-primary-light);
+    /* font-weight: bold; */
+    font-size: larger;
+    /* letter-spacing: 1px; */
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type~=block-ref]:hover,
+.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref]:hover {
+  background-color: var(--b3-theme-primary-lightest);
+}

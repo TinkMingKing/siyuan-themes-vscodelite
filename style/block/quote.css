@@ -1,0 +1,7 @@
+/* .b3-typography blockquote,
+.b3-typography .bq,
+.protyle-wysiwyg blockquote,
+.protyle-wysiwyg .bq {
+    color: var(--b3-theme-primary);
+    border-left: .25em solid var(--b3-border-color);
+} */

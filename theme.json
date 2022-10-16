@@ -1,0 +1,7 @@
+{
+  "name": "Pure Light",
+  "author": "MingKing",
+  "url": "https://github.com/TinkMingKing",
+  "version": "1.0.0",
+  "modes": ["light","dark"]
+}
