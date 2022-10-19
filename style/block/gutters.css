@@ -1,0 +1,4 @@
+/* 块标动画 */
+.protyle-gutters {
+    transition: all 200ms ease-out;
+}

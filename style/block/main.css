@@ -15,3 +15,6 @@
 
 /* 空行样式 */
 @import url("./empty.css");
+
+/* 块标样式 */
+@import url("./gutters.css");
