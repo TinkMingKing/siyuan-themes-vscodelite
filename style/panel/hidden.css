@@ -36,6 +36,6 @@
 } */
 
 /*隐藏块滚动条*/
-/* .protyle-scroll .b3-slider {
+.protyle-scroll .b3-slider {
     display: none;
-} */
+}
