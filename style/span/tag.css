@@ -1,30 +1,25 @@
 /* 标签 */
 .protyle-wysiwyg [data-node-id] span[data-type~=tag] {
-    background-color: var(--b3-theme-primary-lightest);
-    /* transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1); */
-    color: var(--b3-theme-primary);
-    /* border-radius: 9999px; */
-    border: none;
-    /* position: relative; */
-    /* padding: .1em .6em; */
-    font-size: 85%;
+  background-color: var(--b3-theme-primary-lightest);
+  color: var(--b3-theme-primary);
+  border: none;
+  font-size: 85%;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type~=tag]:hover {
-    background-color: var(--b3-theme-primary-lighter);
+  background-color: var(--b3-theme-primary-lighter);
 }
 
 .protyle-background__tags > .item::before,
 .protyle-wysiwyg span[data-type~=tag]::before {
-/* 标签标志 */
-content: "#";
-display: inline-block;
-margin-right: 0.2em;
+  /* 标签标志 */
+  content: "#";
+  display: inline-block;
+  margin-right: 0.2em;
 }
 
 .protyle-background__tags > .item, .protyle-wysiwyg span[data-type~=tag] {
   border-bottom: 0 none transparent !important;
-  border-radius: 1em;
   padding: 1px 0.5em 1px 0.5em;
   transition: all 200ms linear 0ms;
 }

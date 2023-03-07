@@ -2,19 +2,19 @@
 @import url("./header.css");
 
 /*嵌入块样式*/
-@import url("./embed.css");
+/* @import url("./embed.css"); */
 
 /* 引述块样式 */
-@import url("./quote.css");
+/* @import url("./quote.css"); */
 
 /* 超级块样式 */
-@import url("./super.css");
+/* @import url("./super.css"); */
 
 /* 列表样式 */
-@import url("./list.css");
+/* @import url("./list.css"); */
 
 /* 空行样式 */
-@import url("./empty.css");
+/* @import url("./empty.css"); */
 
 /* 块标样式 */
 @import url("./gutters.css");
