@@ -1,0 +1,31 @@
+window.theme = {};
+window.theme.loadMUIStyle = function (linkHref, scriptHref) {
+    let link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = linkHref;
+    document.head.appendChild(link);
+    let script = document.createElement('script');
+    script.src = scriptHref;
+    document.head.appendChild(script);
+};
+
+// window.theme.addClassName = function (className) {
+//     let mclass = document.querySelector(className);
+//     console.log(mclass);
+// };
+
+window.theme.addScript = function (src) {
+    let script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    let el = document.head.appendChild(script);
+};
+
+window.theme.loadMUIStyle("//cdn.muicss.com/mui-0.10.3/css/mui.min.css","//cdn.muicss.com/mui-0.10.3/js/mui.min.js");
+
+// const themeStyle = document.getElementById('themeStyle'); // 当前主题引用路径
+let reg = /theme.css/;
+// let tmp = String(themeStyle.href).replace(reg, "js/tabs.js");
+// console.log(tmp);
+window.theme.addScript(String(themeStyle.href).replace(reg, "js/tabs.js"));

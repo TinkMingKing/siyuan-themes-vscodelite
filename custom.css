@@ -1,0 +1,14 @@
+/* 引入官方root元素,不可修改 */
+@import url("./root.css");
+
+/* 块样式 */
+@import url("./style/block/main.css");
+
+/* 行级元素样式 */
+@import url("./style/span/main.css");
+
+/* 主界面样式 */
+@import url("./style/panel/main.css");
+
+/* 自定义样式 */
+@import url("./style/mystyle/main.css");
