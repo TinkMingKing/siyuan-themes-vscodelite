@@ -22,9 +22,9 @@
 
         overflow: auto;
 
-        &::-webkit-scrollbar {
-            // width: 10px;
-        }
+        // &::-webkit-scrollbar {
+        //     width: 10px;
+        // }
 
         &::-webkit-scrollbar-track-piece {
             // width: 10px;
@@ -53,4 +53,18 @@
             }
         }
     }
+}
+
+// 拖动条
+.layout__resize--lr::after{
+    visibility: hidden;
+    // background-color: white;
+}
+
+.dock#dockLeft{
+    border-right: none;
+}
+
+.dock#dockRight{
+    border-left: none;
 }

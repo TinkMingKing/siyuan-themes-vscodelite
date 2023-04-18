@@ -57,6 +57,7 @@ body.body--blur{
 
     $scrollbar-track-border: 1px solid var(--mk-protyle-content-scrollbar-track-border);
     &::-webkit-scrollbar-track {
+        border-right: $scrollbar-track-border;
         border-left: $scrollbar-track-border;
         border-top: $scrollbar-track-border;
     }

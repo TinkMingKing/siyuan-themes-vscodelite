@@ -21,6 +21,7 @@ body.body--blur .protyle-wysiwyg *::selection {
   width: 15px;
 }
 .protyle-content::-webkit-scrollbar-track {
+  border-right: 1px solid var(--mk-protyle-content-scrollbar-track-border);
   border-left: 1px solid var(--mk-protyle-content-scrollbar-track-border);
   border-top: 1px solid var(--mk-protyle-content-scrollbar-track-border);
 }
