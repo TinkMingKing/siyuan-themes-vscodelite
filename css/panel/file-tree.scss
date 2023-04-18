@@ -1,0 +1,56 @@
+.sy__file {
+    // &:hover {
+    //     div.fn__flex-1 {
+    //         &::-webkit-scrollbar-thumb {
+    //             // background: #c1c1c1;
+    //             visibility: visible;
+    //             // opacity: 1;
+    //         }
+    //     }
+    // }
+
+    div.fn__flex-1 {
+        &:hover {
+
+            &::-webkit-scrollbar-thumb {
+                // background: #c1c1c1;
+                visibility: visible;
+                // opacity: 1;
+
+            }
+        }
+
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            // width: 10px;
+        }
+
+        &::-webkit-scrollbar-track-piece {
+            // width: 10px;
+            opacity: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+            opacity: 0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            visibility: hidden;
+            //无法设置透明度
+            // opacity: 0;
+            // transition: all .2s cubic-bezier(0, 0, .2, 1) 0ms, opacity .3s cubic-bezier(0, 0, 0.2, 1) 0ms;
+            border-radius: 0;
+            background: var(--mk-filetree-scrollbar-thumb);
+            box-shadow: none;
+
+            &:hover {
+                background: var(--mk-filetree-scrollbar-thumb--hover);
+            }
+
+            &:active {
+                background: var(--mk-filetree-scrollbar-thumb--active);
+            }
+        }
+    }
+}

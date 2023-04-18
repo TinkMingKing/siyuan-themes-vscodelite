@@ -1,0 +1,80 @@
+// .protyle-wysiwyg {
+//     & *::selection{
+//             background-color: #cddcf6;
+//     }
+//     div[contenteditable][spellcheck]{
+//         &::selection{
+//             background-color: #cddcf6;
+//         }
+
+//         span::selection{
+//             background-color: #cde0f6;
+//         }
+//     }
+
+// }
+
+// 选中文本颜色
+.protyle-wysiwyg *::selection {
+    background-color: var(--mk-protyle-wysiwyg--selection);
+}
+
+// .layout__center{
+//     // div.layout__wnd--active[data-type="wnd"][data-id]{
+//         .protyle-wysiwyg *::selection {
+//             background-color: #cddcf6;
+//         // }
+//     }
+//     div[data-type="wnd"][data-id]:not(.layout__wnd--active){
+//         .protyle-wysiwyg *::selection {
+//             background-color: #e6ebf1;
+//         }
+//     }
+    
+// }
+
+// 选中文本失去焦点颜色
+body.body--blur{
+    .protyle-wysiwyg *::selection {
+        background-color: var(--mk-protyle-wysiwyg--selection--blur);
+    }
+}
+
+
+.protyle-content {
+    &:hover{
+        &::-webkit-scrollbar-thumb {
+            // background: #c1c1c1;
+            visibility: visible;
+            // opacity: 1;
+        }
+    }
+
+    // border: 1px solid #dcdcdc;
+    &::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    $scrollbar-track-border: 1px solid var(--mk-protyle-content-scrollbar-track-border);
+    &::-webkit-scrollbar-track {
+        border-left: $scrollbar-track-border;
+        border-top: $scrollbar-track-border;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        visibility: hidden;
+        // opacity: 0;
+        pointer-events: none;
+        border-radius: 0;
+        background: var(--mk-protyle-content-scrollbar-thumb);
+        box-shadow: none;
+
+        &:hover {
+            background: var(--mk-protyle-content-scrollbar-thumb--hover);
+        }
+
+        &:active {
+            background: var(--mk-protyle-content-scrollbar-thumb--active);
+        }
+    }
+}

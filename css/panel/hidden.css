@@ -1,41 +1,35 @@
+@charset "UTF-8";
 /* 隐藏非必要元素 */
-
 /* 隐藏右栏左侧线 */
 /* .dock#dockLeft {
     border-right: none;
 } */
-
 /* 隐藏左栏右侧线 */
 /* .dock#dockRight {
     border-left: none;
 } */
-
 /* 隐藏右面板右侧线 */
 /* .layout__resize--lr {
     visibility: hidden;
 } */
-
 /* 隐藏奇怪的线 */
 /* #layouts > div:nth-child(1){
     visibility: hidden;
 } */
-
 /*隐藏关闭按钮*/
 .b3-dialog__close {
-    display: none;
+  display: none;
 }
 
 /*隐藏关系图*/
 /* .b3-tooltips__w[data-type="graph"] {
     display: none;
 } */
-
 /*隐藏全局关系图*/
 /* .b3-tooltips__w[data-type="globalGraph"] {
     display: none;
 } */
-
 /*隐藏块滚动条*/
-.protyle-scroll .b3-slider {
-    display: none;
-}
+.protyle-scroll {
+  display: none;
+}/*# sourceMappingURL=hidden.css.map */

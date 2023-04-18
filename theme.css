@@ -1,14 +1,374 @@
-/* 引入官方root元素,不可修改 */
-@import url("./root.css");
+@charset "UTF-8";
+/* 各级标题 */
+.protyle-wysiwyg [data-node-id].h1 {
+  display: flex;
+  color: var(--mk-block-header-h1);
+}
+.protyle-wysiwyg [data-node-id].h1:not([fold="1"]):before {
+  content: "#";
+  border-right: 3px solid var(--mk-block-header-h1);
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
 
-/* 块样式 */
-@import url("./style/block/main.css");
+.b3-typography h1 {
+  display: flex;
+  color: var(--mk-block-header-h1);
+}
+.b3-typography h1:before {
+  content: "#";
+  border-right: 3px solid var(--mk-block-header-h1);
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
 
-/* 行级元素样式 */
-@import url("./style/span/main.css");
+.protyle-wysiwyg [data-node-id].h2 {
+  display: flex;
+  color: #2E75B5;
+}
+.protyle-wysiwyg [data-node-id].h2:not([fold="1"]):before {
+  content: "#";
+  border-right: 3px solid #2E75B5;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
 
-/* 主界面样式 */
-@import url("./style/panel/main.css");
+.b3-typography h2 {
+  display: flex;
+  color: #2E75B5;
+}
+.b3-typography h2:before {
+  content: "#";
+  border-right: 3px solid #2E75B5;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
 
-/* 自定义样式 */
-@import url("./style/mystyle/main.css");
+.protyle-wysiwyg [data-node-id].h3 {
+  display: flex;
+  color: #BF9000;
+}
+.protyle-wysiwyg [data-node-id].h3:not([fold="1"]):before {
+  content: "#";
+  border-right: 3px solid #BF9000;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.b3-typography h3 {
+  display: flex;
+  color: #BF9000;
+}
+.b3-typography h3:before {
+  content: "#";
+  border-right: 3px solid #BF9000;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.protyle-wysiwyg [data-node-id].h4 {
+  display: flex;
+  color: #70AD47;
+}
+.protyle-wysiwyg [data-node-id].h4:not([fold="1"]):before {
+  content: "#";
+  border-right: 3px solid #70AD47;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.b3-typography h4 {
+  display: flex;
+  color: #70AD47;
+}
+.b3-typography h4:before {
+  content: "#";
+  border-right: 3px solid #70AD47;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.protyle-wysiwyg [data-node-id].h5 {
+  display: flex;
+  color: #E84C22;
+}
+.protyle-wysiwyg [data-node-id].h5:not([fold="1"]):before {
+  content: "#";
+  border-right: 3px solid #E84C22;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.b3-typography h5 {
+  display: flex;
+  color: #E84C22;
+}
+.b3-typography h5:before {
+  content: "#";
+  border-right: 3px solid #E84C22;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.protyle-wysiwyg [data-node-id].h6 {
+  display: flex;
+  color: #8064A2;
+}
+.protyle-wysiwyg [data-node-id].h6:not([fold="1"]):before {
+  content: "#";
+  border-right: 3px solid #8064A2;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.b3-typography h6 {
+  display: flex;
+  color: #8064A2;
+}
+.b3-typography h6:before {
+  content: "#";
+  border-right: 3px solid #8064A2;
+  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.protyle-wysiwyg [data-node-id].h6 [spellcheck] {
+  min-height: auto;
+}
+
+.sy__outline ul.b3-list.b3-list--background [data-subtype=h2],
+ul.b3-list.b3-list--background [data-subtype=h2] .b3-list-item__text {
+  color: #2E75B5;
+}
+
+.sy__outline ul.b3-list.b3-list--background [data-subtype=h3],
+ul.b3-list.b3-list--background [data-subtype=h3] .b3-list-item__text {
+  color: #BF9000;
+}
+
+.sy__outline ul.b3-list.b3-list--background [data-subtype=h4],
+ul.b3-list.b3-list--background [data-subtype=h4] .b3-list-item__text {
+  color: #70AD47;
+}
+
+.sy__outline ul.b3-list.b3-list--background [data-subtype=h5],
+ul.b3-list.b3-list--background [data-subtype=h5] .b3-list-item__text {
+  color: #E84C22;
+}
+
+.sy__outline ul.b3-list.b3-list--background [data-subtype=h6],
+ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
+  color: #8064A2;
+}
+
+.protyle-title__input {
+  text-align: center;
+}
+
+body.body--blur .toolbar {
+  background: var(--mk-toolbar-background--blur);
+}
+body.body--blur .toolbar #drag {
+  color: var(--mk-toolbar--blur-item);
+}
+body.body--blur .toolbar .toolbar__text {
+  color: var(--mk-toolbar--blur-item);
+}
+body.body--blur .toolbar .toolbar__item {
+  color: var(--mk-toolbar--blur-item);
+}
+
+.toolbar {
+  background-color: var(--mk-toolbar-background);
+  border-bottom: none;
+}
+.toolbar #drag {
+  color: var(--mk-toolbar-item);
+}
+.toolbar .toolbar__text {
+  color: var(--mk-toolbar-item);
+  font-weight: bold;
+}
+.toolbar .toolbar__item {
+  color: var(--mk-toolbar-item);
+}
+
+.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover,
+.toolbar__item--active {
+  background-color: var(--mk-toolbar-item--hover);
+}
+
+/* 隐藏非必要元素 */
+/* 隐藏右栏左侧线 */
+/* .dock#dockLeft {
+    border-right: none;
+} */
+/* 隐藏左栏右侧线 */
+/* .dock#dockRight {
+    border-left: none;
+} */
+/* 隐藏右面板右侧线 */
+/* .layout__resize--lr {
+    visibility: hidden;
+} */
+/* 隐藏奇怪的线 */
+/* #layouts > div:nth-child(1){
+    visibility: hidden;
+} */
+/*隐藏关闭按钮*/
+.b3-dialog__close {
+  display: none;
+}
+
+/*隐藏关系图*/
+/* .b3-tooltips__w[data-type="graph"] {
+    display: none;
+} */
+/*隐藏全局关系图*/
+/* .b3-tooltips__w[data-type="globalGraph"] {
+    display: none;
+} */
+/*隐藏块滚动条*/
+.protyle-scroll {
+  display: none;
+}
+
+.protyle-wysiwyg *::-moz-selection {
+  background-color: var(--mk-protyle-wysiwyg--selection);
+}
+
+.protyle-wysiwyg *::selection {
+  background-color: var(--mk-protyle-wysiwyg--selection);
+}
+
+body.body--blur .protyle-wysiwyg *::-moz-selection {
+  background-color: var(--mk-protyle-wysiwyg--selection--blur);
+}
+
+body.body--blur .protyle-wysiwyg *::selection {
+  background-color: var(--mk-protyle-wysiwyg--selection--blur);
+}
+
+.protyle-content:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.protyle-content::-webkit-scrollbar {
+  width: 15px;
+}
+.protyle-content::-webkit-scrollbar-track {
+  border-left: 1px solid var(--mk-protyle-content-scrollbar-track-border);
+  border-top: 1px solid var(--mk-protyle-content-scrollbar-track-border);
+}
+.protyle-content::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  pointer-events: none;
+  border-radius: 0;
+  background: var(--mk-protyle-content-scrollbar-thumb);
+  box-shadow: none;
+}
+.protyle-content::-webkit-scrollbar-thumb:hover {
+  background: var(--mk-protyle-content-scrollbar-thumb--hover);
+}
+.protyle-content::-webkit-scrollbar-thumb:active {
+  background: var(--mk-protyle-content-scrollbar-thumb--active);
+}
+
+.sy__file div.fn__flex-1 {
+  overflow: auto;
+}
+.sy__file div.fn__flex-1:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.sy__file div.fn__flex-1::-webkit-scrollbar-track-piece {
+  opacity: 0;
+}
+.sy__file div.fn__flex-1::-webkit-scrollbar-track {
+  opacity: 0;
+}
+.sy__file div.fn__flex-1::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  border-radius: 0;
+  background: var(--mk-filetree-scrollbar-thumb);
+  box-shadow: none;
+}
+.sy__file div.fn__flex-1::-webkit-scrollbar-thumb:hover {
+  background: var(--mk-filetree-scrollbar-thumb--hover);
+}
+.sy__file div.fn__flex-1::-webkit-scrollbar-thumb:active {
+  background: var(--mk-filetree-scrollbar-thumb--active);
+}
+
+.layout-tab-bar.layout-tab-bar--readonly {
+  background-color: var(--mk-tabbar-background-color-item--readonly);
+  border-bottom: none;
+}
+
+.layout-tab-bar {
+  background-color: var(--mk-tabbar-background-color);
+  border-bottom: none;
+}
+
+.layout-tab-bar .item.item--focus {
+  background-color: var(--mk-tabbar-background-color-item--focus);
+}
+
+.layout-tab-bar .item.item--focus:after {
+  visibility: hidden;
+}
+
+.protyle:not(:has(.protyle-content[data-scrolltop="0"])) .protyle-breadcrumb {
+  box-shadow: 0px 5px 10px -10px grey;
+}
+
+.protyle:not(:has(.protyle-content[data-scrolltop="0"])):has(.protyle-content:not([data-scrolltop])) .protyle-breadcrumb {
+  box-shadow: none;
+} 
+:root[data-theme-mode=light] {
+  --mk-toolbar-background: #dddddd;
+  --mk-toolbar-background--blur: #e5e5e5;
+  --mk-toolbar--blur-item: #7b7b7b;
+  --mk-toolbar-item: #333333;
+  --mk-toolbar-item--hover: #bfbfbf;
+  --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
+  --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
+  --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+  --mk-tabbar-background-color: #ececec;
+  --mk-tabbar-background-color-item--readonly: #f3f3f3;
+  --mk-tabbar-background-color-item--focus: #ffffff;
+  --mk-protyle-wysiwyg--selection: #cddcf6;
+  --mk-protyle-wysiwyg--selection--blur: #e6ebf1;
+  --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
+  --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
+  --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
+  --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
+  --mk-scrollbar-track-border: #dcdcdc;
+  --mk-scrollbar-thumb: #c1c1c1;
+  --mk-scrollbar-thumb--hover: #929292;
+  --mk-scrollbar-thumb--active: #666666;
+  --mk-block-header-h1: #202124;
+}
+
+:root[data-theme-mode=dark] {
+  --mk-toolbar-background: #3c3c3c;
+  --mk-toolbar-background--blur: #323233;
+  --mk-toolbar--blur-item: #8e8e8e;
+  --mk-toolbar-item: #cccccc;
+  --mk-toolbar-item--hover: #6f6f6f;
+  --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
+  --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
+  --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+  --mk-tabbar-background-color: #2d2d2d;
+  --mk-tabbar-background-color-item--readonly: #252526;
+  --mk-tabbar-background-color-item--focus: #1e1e1e;
+  --mk-protyle-wysiwyg--selection: #334e76;
+  --mk-protyle-wysiwyg--selection--blur: #3b3d41;
+  --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
+  --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
+  --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
+  --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
+  --mk-scrollbar-track-border: #393939;
+  --mk-scrollbar-thumb: #424242;
+  --mk-scrollbar-thumb--hover: #4f4f4f;
+  --mk-scrollbar-thumb--active: #5e5e5e;
+  --mk-block-header-h1: #cbd1d9;
+}/*# sourceMappingURL=theme.css.map */

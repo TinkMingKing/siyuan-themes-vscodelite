@@ -1,0 +1,22 @@
+.layout-tab-bar.layout-tab-bar--readonly {
+  background-color: var(--mk-tabbar-background-color-item--readonly);
+  border-bottom: none;
+}
+
+.layout-tab-bar {
+  background-color: var(--mk-tabbar-background-color);
+  border-bottom: none;
+}
+.layout-tab-bar .item.item--focus {
+  background-color: var(--mk-tabbar-background-color-item--focus);
+}
+.layout-tab-bar .item.item--focus:after {
+  visibility: hidden;
+}
+
+.protyle:not(:has(.protyle-content[data-scrolltop="0"])) .protyle-breadcrumb {
+  box-shadow: 0px 5px 10px -10px grey;
+}
+.protyle:not(:has(.protyle-content[data-scrolltop="0"])):has(.protyle-content:not([data-scrolltop])) .protyle-breadcrumb {
+  box-shadow: none;
+}/*# sourceMappingURL=tabbar.css.map */

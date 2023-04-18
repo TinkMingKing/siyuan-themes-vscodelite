@@ -1,0 +1,60 @@
+// 只读标签区域
+.layout-tab-bar.layout-tab-bar--readonly {
+    background-color: var(--mk-tabbar-background-color-item--readonly);
+    border-bottom: none;
+}
+
+// 活动标签区域
+.layout-tab-bar {
+    background-color: var(--mk-tabbar-background-color);
+    border-bottom: none;
+
+    .item.item--focus {
+        background-color: var(--mk-tabbar-background-color-item--focus);
+
+        &:after {
+            visibility: hidden;
+        }
+    }
+}
+
+// 面包屑栏单边阴影
+// .protyle-breadcrumb{
+//     box-shadow: 0px 5px 10px -10px grey;
+// }
+
+// 面包屑栏单边阴影
+.protyle {
+
+    //有[data-scrolltop]属性且不在顶部
+    &:not(:has(.protyle-content[data-scrolltop="0"])) {
+
+        //面包屑栏单边阴影
+        .protyle-breadcrumb {
+            box-shadow: 0px 5px 10px -10px grey;
+        }
+
+        //没有[data-scrolltop]属性
+        &:has(.protyle-content:not([data-scrolltop])) {
+            .protyle-breadcrumb {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+// 标签页滚动条
+// .layout-tab-bar{
+//     overflow: hidden;
+//     &::-webkit-scrollbar-thumb {
+//         box-sizing: content-box;
+//         background: #c1c1c1;
+//     }
+//     &::-webkit-scrollbar-corner {
+//         background-color: rgba(0,0,0,0);
+//     }
+//     &::-webkit-scrollbar {
+//         width: 10px;
+//         height: 10px;
+//     }
+// }

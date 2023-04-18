@@ -1,0 +1,84 @@
+:root[data-theme-mode="light"] {
+
+    // [区域]
+    // toolbar 顶部工具栏
+    --mk-toolbar-background: #dddddd;
+    --mk-toolbar-background--blur: #e5e5e5;
+    --mk-toolbar--blur-item: #7b7b7b;
+    --mk-toolbar-item: #333333;
+    --mk-toolbar-item--hover: #bfbfbf;
+
+    // file-tree 文档树
+    --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
+    --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
+    --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+
+    // tabbar 标签栏
+    --mk-tabbar-background-color: #ececec;
+    --mk-tabbar-background-color-item--readonly: #f3f3f3;
+    --mk-tabbar-background-color-item--focus: #ffffff;
+
+    // 编辑区
+    --mk-protyle-wysiwyg--selection: #cddcf6;
+    --mk-protyle-wysiwyg--selection--blur: #e6ebf1;
+    --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
+    --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
+    --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
+    --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
+
+    // [控件]
+    --mk-scrollbar-track-border: #dcdcdc;
+    --mk-scrollbar-thumb: #c1c1c1;
+    --mk-scrollbar-thumb--hover: #929292;
+    --mk-scrollbar-thumb--active: #666666;
+
+    // [块]
+    --mk-block-header-h1: #202124;
+
+
+}
+
+// 色彩增减函数
+
+
+
+
+
+:root[data-theme-mode="dark"] {
+
+    // [区域]
+    // toolbar 顶部工具栏
+    --mk-toolbar-background: #3c3c3c;
+    --mk-toolbar-background--blur: #323233;
+    --mk-toolbar--blur-item: #8e8e8e;
+    --mk-toolbar-item: #cccccc;
+    --mk-toolbar-item--hover: #6f6f6f;
+
+    // file-tree 文档树
+    --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
+    --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
+    --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+
+    // tabbar 标签栏
+    --mk-tabbar-background-color: #2d2d2d;
+    --mk-tabbar-background-color-item--readonly: #252526;
+    --mk-tabbar-background-color-item--focus: #1e1e1e;
+
+    // 编辑区
+    --mk-protyle-wysiwyg--selection: #334e76;
+    --mk-protyle-wysiwyg--selection--blur: #3b3d41;
+    --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
+    --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
+    --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
+    --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
+
+    // [控件]
+    --mk-scrollbar-track-border: #393939;
+    --mk-scrollbar-thumb: #424242;
+    --mk-scrollbar-thumb--hover: #4f4f4f;
+    --mk-scrollbar-thumb--active: #5e5e5e;
+
+    // [块]
+    --mk-block-header-h1: #cbd1d9;
+
+}

@@ -1,0 +1,42 @@
+body.body--blur{
+    .toolbar{
+        background: var(--mk-toolbar-background--blur);
+
+        #drag{
+            color: var(--mk-toolbar--blur-item);
+        }
+
+        .toolbar__text{
+            color: var(--mk-toolbar--blur-item);
+            // font-weight: bold;
+        }
+        
+        .toolbar__item{
+            color: var(--mk-toolbar--blur-item);
+        }
+    }
+}
+
+.toolbar {
+    background-color: var(--mk-toolbar-background);
+    
+    border-bottom:none;
+
+    #drag{
+        color: var(--mk-toolbar-item);
+    }
+
+    .toolbar__text{
+        color: var(--mk-toolbar-item);
+        font-weight: bold;
+    }
+    
+    .toolbar__item{
+        color: var(--mk-toolbar-item);
+    }
+}
+
+.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover,
+.toolbar__item--active{
+    background-color: var(--mk-toolbar-item--hover);
+}

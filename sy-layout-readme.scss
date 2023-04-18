@@ -1,0 +1,428 @@
+// body sy全局主体 done
+body{
+
+    // svg emojiScriptSvg todo none
+    #emojiScriptSvg{}
+    // svg*2 todo none
+    svg[style][xmlns]{}
+
+    // toolbar 顶部工具栏 done (.toolbar--browser 浏览器版)
+    div#toolbar.toolbar.fn__flex{
+
+        // barWorkspace 开始按钮
+        div#barWorkspace.toolbar__item{}
+
+        // barSync 同步按钮
+        div#barSync.toolbar__item.b3-tooltips.b3-tooltips__se{}
+        
+        // barBack 后退按钮
+        button#barBack[data-menu].toolbar__item.toolbar__item--disabled.b3-tooltips b3-tooltips__se{}
+
+        // barForward 前进按钮
+        button#barForward[data-menu].toolbar__item.toolbar__item--disabled.b3-tooltips b3-tooltips__se{}
+
+        // drag 拖动栏
+        div#drag.fn__flex-1.fn__ellipsis[title][style]{}
+
+        // toolbarVIP vip按钮
+        div#toolbarVIP.fn__flex{}
+
+        // barSearch 搜索按钮
+        div#barSearch.toolbar__item.b3-tooltips.b3-tooltips__sw{}
+
+        // barReadonly 只读编辑按钮
+        div#barReadonly.toolbar__item.b3-tooltips.b3-tooltips__sw{}
+
+        // barMode 外观模式按钮
+        div#barMode.toolbar__item.b3-tooltips.b3-tooltips__sw{}
+
+        // windowControls 窗口控制栏
+        div#windowControls.fn__flex{
+            // minWindow 最小化
+            div#minWindow.toolbar__item.b3-tooltips.b3-tooltips__sw{}
+
+            // maxWindow 向下还原
+            div#maxWindow.b3-tooltips.b3-tooltips__sw.toolbar__item{}
+
+            // restoreWindow 最大化
+            div#restoreWindow.b3-tooltips.b3-tooltips__sw.toolbar__item{}
+            
+            // closeWindow 关闭
+            div#closeWindow.toolbar__item.b3-tooltips.b3-tooltips__sw{}
+        }
+    }
+
+    // sy工作区主体
+    div.fn__flex-1.fn__flex{
+
+        // dockLeft 左侧dock栏 done
+        div#dockLeft.dock.dock--vertical{
+            // div 左上按钮区
+            div{
+
+                // file 文档树
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="file"][data-hotkeylangid="fileTree"][data-height][data-width][data-index]{}
+
+                // outline 大纲
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="outline"][data-hotkeylangid="outline"][data-height][data-width][data-index]{}
+
+                // inbox 收集箱
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="inbox"][data-hotkeylangid="inbox"][data-height][data-width][data-index]{}
+
+            }
+            // div 空白
+            div.fn__flex-1{}
+
+            // div 左下按钮区
+            div{
+
+                // 书签
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="bookmark"][data-hotkeylangid="bookmark"][data-height][data-width][data-index]{}
+
+                // 标签
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="tag"][data-hotkeylangid="tag"][data-height][data-width][data-index]{}
+
+            }
+
+            // dock__item--pin 钉住
+            span.dock__item.dock__item--pin.b3-tooltips.b3-tooltips__w{}
+
+        }
+
+        // layouts 中间布局块
+        div#layouts.layout.fn__flex-1.fn__flex-column{
+
+            // div 中间布局块
+            div.fn__flex.fn__flex-1{
+
+                // layout__dockl 左侧dock面板
+                div.fn__flex-column.fn__flex-shrink.layout__dockl{
+
+                    // div 左侧dock面板主体
+                    div.fn__flex-1.fn__flex{
+    
+                        // wnd 窗口
+                        div.fn__flex-column.fn__flex.fn__flex-1[data-type="wnd"][data-id]{
+    
+                            // div todo
+                            div.fn__flex.fn__none{}
+    
+                            // layout-tab-container 窗口容器
+                            div.layout-tab-container.fn__flex-1{
+
+                                // sy__file 文档树 .layout__tab--active
+                                div.fn__flex-1.fn__flex-column.file-tree.sy__file[data-id]{
+
+                                    // block__icons 顶部（标题及按钮）
+                                    div.block__icons{
+
+                                        // block__logo logo
+                                        div.block__logo{}
+
+                                        // fn__space 间隔元素
+                                        span.fn__flex-1.fn__space{}
+
+                                        // focus 定位
+                                        span.block__icon.b3-tooltips.b3-tooltips__sw[data-type="focus"]{}
+
+                                        // fn__space 间隔元素
+                                        span.fn__space{}
+
+                                        // collapse 折叠
+                                        span.block__icon.b3-tooltips.b3-tooltips__sw[data-type="collapse"]{}
+
+                                        // fn__space 间隔元素
+                                        span.fn__space{}
+
+                                        // more 更多
+                                        span.block__icon.b3-tooltips.b3-tooltips__sw[data-type="more"]{}
+
+                                        // fn__space 间隔元素
+                                        span.fn__space{}
+
+                                        // min 最小化
+                                        span.block__icon.b3-tooltips.b3-tooltips__sw[data-type="min"]{}
+
+                                    }
+
+                                    // div 中部（目录树）
+                                    div.fn__flex-1{
+
+                                        // ul *n 笔记本
+                                        ul.b3-list.b3-list--background[data-url][data-sort][data-sortmode]{
+
+                                            // li root （.b3-list-item--focus 焦点）
+                                            li.b3-list-item.b3-list-item--hide-action[draggable][data-type="navigation-root"]{
+
+                                                // b3-list-item__toggle 折叠按钮
+                                                span.b3-list-item__toggle.b3-list-item__toggle--hl{}
+
+                                                // b3-list-item__icon 图标
+                                                span.b3-list-item__icon.b3-tooltips.b3-tooltips__e{}
+
+                                                // b3-list-item__text 文本
+                                                span.b3-list-item__text{}
+
+                                                // more-root 更多按钮
+                                                span.b3-list-item__action.b3-tooltips.b3-tooltips__w[data-type="more-root"]{}
+
+                                                // new 新建按钮
+                                                span.b3-list-item__action.b3-tooltips.b3-tooltips__w[data-type="new"]{}
+
+                                            }
+
+                                            // ul 子级list
+                                            ul{
+                                                // li *n 文档块 （.b3-list-item--focus 焦点）
+                                                li.b3-list-item.b3-list-item--hide-action[title][data-node-id][data-name][draggable][data-count][data-path][data-type="navigation-file"]{
+
+                                                    // b3-list-item__toggle 折叠按钮
+                                                    span.b3-list-item__toggle.b3-list-item__toggle--hl{}
+
+                                                    // b3-list-item__icon 图标
+                                                    span.b3-list-item__icon.b3-tooltips.b3-tooltips__n{}
+
+                                                    // b3-list-item__text 文本
+                                                    span.b3-list-item__text{}
+
+                                                    // more-file 更多按钮
+                                                    span.b3-list-item__action.b3-tooltips.b3-tooltips__nw[data-type="more-file"]{}
+
+                                                    // new 新建按钮
+                                                    span.b3-list-item__action.b3-tooltips.b3-tooltips__nw[data-type="new"]{}
+
+                                                    // sapn 引用块计数
+                                                    span.popover__block.counter.b3-tooltips b3-tooltips__nw{}
+
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                    // ul 底部（已关闭笔记本）
+                                    ul.b3-list.fn__flex-column.fn__flex-1{
+
+                                        // li 头部
+                                        li.b3-list-item[data-type="toggle"]{}
+
+                                        // ul 主体
+                                        ul.fn__flex-1{
+
+                                            // li *n 基本元素
+                                            li.b3-list-item.b3-list-item--hide-action[data-type="open"][data-url]{}
+
+                                        }
+
+                                    }
+                                }
+
+                                // sy__outline 大纲 nexttodo
+                                div.fn__flex-1.fn__flex-column.file-tree.sy__outline[data-id]{}
+
+                                // sy__inbox 收集箱
+                                div.fn__flex-1.fn__flex-column.file-tree.sy__inbox[data-id]{}
+
+                            }
+    
+                        }
+    
+                    }
+    
+                    // div 左侧第二dock面板拖动条
+                    div.layout__resize{}
+    
+                    // div 左侧dock面板主体（底部）
+                    div.fn__flex-1.fn__flex{}
+    
+                    // layout__dockresize todo
+                    div.layout__dockresize.layout__dockresize--lr{}
+    
+                }
+
+                // div 左侧dock面板拖动条
+                div.layout__resize--lr.layout__resize{}
+
+                // layout__center 中部面板
+                div.layout__center.fn__flex.fn__flex-1{
+
+                    // div 中部面板
+                    div.fn__flex-1.fn__flex-column{
+
+                        // div(+resize) *n 文档块编辑面板
+                        div.fn__flex-1.fn__flex{
+                            // wnd 编辑窗（.layout__wnd--active 焦点）
+                            div.fn__flex-column.fn__flex.fn__flex-1[data-type="wnd"][data-id]{
+
+                                // div 标签栏
+                                div.fn__flex{
+
+                                    // layout-tab-bar 活动标签区
+                                    ul.layout-tab-bar.fn__flex{
+
+                                        // tab-header *n 标签 item.item--focus
+                                        li.item[data-type="tab-header"][draggable][data-id][data-position][data-activetime]{}
+
+                                    }
+
+                                    // layout-tab-bar--readonly 只读标签区
+                                    ul.layout-tab-bar.layout-tab-bar--readonly.fn__flex-1{
+                                        // 常驻不动标签
+                                        li.item.item--readonly{
+
+                                            // new 新建
+                                            span.item__close[data-type="new"][title]{}
+
+                                            // span 间隔元素
+                                            span.fn__flex-1{}
+
+                                            // more 更多
+                                            span.item__close[data-type="more"][data-menu][title]{}
+
+                                        }
+                                    }
+
+                                }
+
+                                // layout-tab-container 编辑区容器
+                                div.layout-tab-container.fn__flex-1{}
+
+                            }
+                        }
+
+                    }
+
+                }
+
+                // div 右侧dock面板拖动条
+                div.layout__resize--lr.layout__resize{}
+
+                // layout__dockr 右侧dock面板
+                div.fn__flex-column.layout__dockr{
+
+                    // div 右侧dock面板主体
+                    div.fn__flex-1.fn__flex{
+    
+                        // wnd 窗口
+                        div.fn__flex-column.fn__flex.fn__flex-1[data-type="wnd"][data-id]{
+    
+                            // div todo
+                            div.fn__flex.fn__none{}
+    
+                            // layout-tab-container 窗口容器
+                            div.layout-tab-container.fn__flex-1{}
+    
+                        }
+    
+                    }
+    
+                    // div 右侧第二dock面板拖动条
+                    div.layout__resize{}
+    
+                    // div 右侧dock面板主体（底部）
+                    div.fn__flex-1.fn__flex{}
+    
+                    // layout__dockresize todo
+                    div.layout__dockresize.layout__dockresize--lr{}
+    
+                }
+                
+
+            }
+
+            // layout__resize 底部dock面板拖动条 done
+            div.layout__resize{}
+
+            // layout__dockb 底部dock面板 done
+            div.fn__flex.layout__dockb{
+
+                // div 底部dock面板主体
+                div.fn__flex-1.fn__flex{
+
+                    // wnd 窗口
+                    div.fn__flex-column.fn__flex.fn__flex-1[data-type="wnd"][data-id]{
+
+                        // div todo
+                        div.fn__flex.fn__none{}
+
+                        // layout-tab-container 窗口容器
+                        div.layout-tab-container.fn__flex-1{}
+
+                    }
+
+                }
+
+                // div 底栏第二dock面板拖动条
+                div.layout__resize--lr.layout__resize.fn__none{}
+
+                // div 底部dock面板主体（右侧）
+                div.fn__flex-1.fn__flex{}
+
+                // layout__dockresize todo
+                div.layout__dockresize{}
+
+            }
+
+        }
+
+        // dockRight 右侧dock栏 done
+        div#dockRight.dock.dock--vertical{
+
+            // div 右上按钮区
+            div{
+
+                // backlinks 反链
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="backlinks"][data-hotkeylangid="backlinks"][data-height][data-width][data-index]{}
+
+            }
+            // div 空白
+            div.fn__flex-1{}
+
+            // div 右下按钮区
+            div{
+
+                // globalGraph 全局关系图
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="globalGraph"][data-hotkeylangid="globalGraph"][data-height][data-width][data-index]{}
+
+                // graph 关系图
+                span.dock__item.b3-tooltips.b3-tooltips__e[data-type="graph"][data-hotkeylangid="graph"][data-height][data-width][data-index]{}
+
+            }
+
+            // dock__item--pin 钉住
+            span.dock__item.dock__item--pin.b3-tooltips b3-tooltips__w{}
+
+        }
+    }
+
+    // status 底部状态栏 done
+    div#fn__flex.status{
+        // barDock 停靠栏按钮
+        div#barDock.toolbar__item.b3-tooltips.b3-tooltips__e{}
+
+        // status__msg 索引信息
+        div.status__msg{}
+
+        // div 空白
+        div.fn__flex-1{}
+
+        // status__backgroundtask 索引进度条 none：fn__none
+        div.status__backgroundtask.fn__none{}
+
+        // status__counter 文档数据统计
+        div.status__counter{}
+
+        // statusHelp 帮助按钮
+        div.statusHelp{}
+    }
+
+    // dockBottom 底部dock栏 todo
+    div#dockBottom.dock.fn__none{}
+
+    // commonMenu 底部命令菜单 none：fn__none
+    div#commonMenu.b3-menu.fn__none{}
+
+    // message 右上角消息栏 done
+    div#message.b3-snackbars{}
+
+}
