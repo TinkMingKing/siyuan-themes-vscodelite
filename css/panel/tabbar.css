@@ -11,7 +11,14 @@
   background-color: var(--mk-tabbar-background-color-item--focus);
 }
 .layout-tab-bar .item.item--focus:after {
-  visibility: hidden;
+  display: none;
+}
+
+body.body--blur .layout-tab-bar .item.item--focus {
+  box-shadow: none;
+}
+body.body--blur .layout-tab-bar .item.item--focus:after {
+  display: none;
 }
 
 .protyle:not(:has(.protyle-content[data-scrolltop="0"])) .protyle-breadcrumb {

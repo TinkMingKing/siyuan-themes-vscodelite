@@ -303,6 +303,14 @@ body.body--blur .protyle-wysiwyg *::selection {
   border-bottom: none;
 }
 
+body.body--blur .layout-tab-bar .item.item--focus {
+  box-shadow: none;
+}
+
+body.body--blur .layout-tab-bar .item.item--focus:after {
+  display: none;
+}
+
 .layout-tab-bar {
   background-color: var(--mk-tabbar-background-color);
   border-bottom: none;
@@ -313,7 +321,7 @@ body.body--blur .protyle-wysiwyg *::selection {
 }
 
 .layout-tab-bar .item.item--focus:after {
-  visibility: hidden;
+  display: none;
 }
 
 .protyle:not(:has(.protyle-content[data-scrolltop="0"])) .protyle-breadcrumb {

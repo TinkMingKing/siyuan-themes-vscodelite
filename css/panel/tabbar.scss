@@ -4,6 +4,8 @@
     border-bottom: none;
 }
 
+
+
 // 活动标签区域
 .layout-tab-bar {
     background-color: var(--mk-tabbar-background-color);
@@ -13,7 +15,19 @@
         background-color: var(--mk-tabbar-background-color-item--focus);
 
         &:after {
-            visibility: hidden;
+            display: none;
+        }
+    }
+}
+
+body.body--blur{
+    .layout-tab-bar {
+        
+        .item.item--focus {
+            box-shadow: none;
+            &:after {
+                display: none;
+            }
         }
     }
 }
