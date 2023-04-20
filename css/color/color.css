@@ -21,6 +21,11 @@
   --mk-scrollbar-thumb--hover: #929292;
   --mk-scrollbar-thumb--active: #666666;
   --mk-block-header-h1: #202124;
+  --mk-block-header-h2: #2E75B5;
+  --mk-block-header-h3: #BF9000;
+  --mk-block-header-h4: #70AD47;
+  --mk-block-header-h5: #E84C22;
+  --mk-block-header-h6: #8064A2;
 }
 
 :root[data-theme-mode=dark] {
@@ -46,4 +51,9 @@
   --mk-scrollbar-thumb--hover: #4f4f4f;
   --mk-scrollbar-thumb--active: #5e5e5e;
   --mk-block-header-h1: #cbd1d9;
+  --mk-block-header-h2: #2E75B5;
+  --mk-block-header-h3: #BF9000;
+  --mk-block-header-h4: #70AD47;
+  --mk-block-header-h5: #E84C22;
+  --mk-block-header-h6: #8064A2;
 }/*# sourceMappingURL=color.css.map */

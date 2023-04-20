@@ -1,0 +1,218 @@
+@use "sass:map";
+// 各级标题前缀格式
+// $header-content: (
+//   1 : "#" counter(h1-section) "\00A0",
+//   2 : "#" counter(h1-section) "." counter(h2-section) "\00A0",
+//   3 : "#" counter(h1-section) "." counter(h2-section) "." counter(h3-section) "\00A0",
+//   4 : "#" counter(h1-section) "." counter(h2-section) "." counter(h3-section) "." counter(h4-section) "\00A0",
+//   5 : "#" counter(h1-section) "." counter(h2-section) "." counter(h3-section) "." counter(h4-section) "." counter(h5-section) "\00A0",
+//   6 : "#" counter(h1-section) "." counter(h2-section) "." counter(h3-section) "." counter(h4-section) "." counter(h5-section) "." counter(h6-section) "\00A0",
+// );
+
+// 构建标题混合器
+@mixin header($number) {
+  .protyle-wysiwyg [data-node-id].h#{$number} {
+    counter-increment: h#{$number}-section;
+    counter-reset: h#{$number+1}-section 0;
+    color: var(--mk-block-header-h#{$number});
+    display: flex;
+
+    $header-content: "#";
+    @for $n from 1 through 6 {
+      @if $n < $number {
+        $header-content: $header-content counter(h#{$n}-section) ".";
+      }
+
+      @else if $n ==$number {
+        $header-content: $header-content counter(h#{$n}-section);
+      }
+    }
+    $header-content: $header-content "\00A0";
+
+    &::before {
+      // content: map.get($header-content, $number);
+      content: $header-content;
+    }
+
+    &[fold="1"]::before {
+      // content: map.get($header-content, $number);
+      content: $header-content;
+
+      // display: flex;
+      position: unset;
+      height: unset;
+      width: unset;
+      background: unset;
+      left: unset;
+      top: unset;
+      border-radius: unset;
+      margin-top: unset;
+    }
+  }
+
+  .sy__outline ul.b3-list.b3-list--background [data-subtype="h#{$number}"],
+  ul.b3-list.b3-list--background [data-subtype="h#{$number}"] .b3-list-item__text {
+    color: var(--mk-block-header-h#{$number});
+  }
+}
+
+// 使用标题混合器
+@include header(1);
+@include header(2);
+@include header(3);
+@include header(4);
+@include header(5);
+@include header(6);
+
+.protyle-title__input {
+  text-align: center;
+}
+
+// // 一级标题
+// .protyle-wysiwyg [data-node-id].h1 {
+//   counter-increment: h1-section;
+//   counter-reset: h2-section 0;
+//   color: var(--mk-block-header-h1);
+//   display: flex;
+
+//   $h1-content: "#" counter(h1-section) ".";
+
+//   &::before {
+//     content: $h1-content;
+//     padding-right: 0.2em;
+//   }
+
+//   &[fold="1"]::before {
+//     content: $h1-content;
+//     @include before;
+//   }
+// }
+
+// // 二级标题
+// .protyle-wysiwyg [data-node-id].h2 {
+//   counter-increment: h2-section;
+//   counter-reset: h3-section 0;
+//   color: #2E75B5;
+//   display: flex;
+
+//   $h2-content: "#" counter(h1-section)"." counter(h2-section)".";
+
+//   &::before {
+//     content: $h2-content;
+//     padding-right: 0.2em;
+//   }
+
+//   &[fold="1"]::before {
+//     content: $h2-content;
+//     @include before;
+//   }
+// }
+
+// // 三级标题
+// .protyle-wysiwyg [data-node-id].h3 {
+//   counter-increment: h3-section;
+//   counter-reset: h4-section 0;
+//   color: #BF9000;
+//   display: flex;
+
+//   $h3-content: "#" counter(h1-section)"." counter(h2-section)"." counter(h3-section)".";
+
+//   &::before {
+//     content: $h3-content;
+//     padding-right: 0.2em;
+//   }
+
+//   &[fold="1"]::before {
+//     content: $h3-content;
+//     @include before;
+//   }
+// }
+
+// // 四级标题
+// .protyle-wysiwyg [data-node-id].h4 {
+//   counter-increment: h4-section;
+//   counter-reset: h5-section 0;
+//   color: #70AD47;
+//   display: flex;
+
+//   $h4-content: "#" counter(h1-section)"." counter(h2-section)"." counter(h3-section)"." counter(h4-section)".";
+
+//   &::before {
+//     content: $h4-content;
+//     padding-right: 0.2em;
+//   }
+
+//   &[fold="1"]::before {
+//     content: $h4-content;
+//     @include before;
+//   }
+// }
+
+// // 五级标题
+// .protyle-wysiwyg [data-node-id].h5 {
+//   counter-increment: h5-section;
+//   counter-reset: h6-section 0;
+//   color: #E84C22;
+//   display: flex;
+
+//   $h5-content: "#" counter(h1-section)"." counter(h2-section)"." counter(h3-section)"." counter(h4-section)"." counter(h5-section)".";
+
+//   &::before {
+//     content: $h5-content;
+//     padding-right: 0.2em;
+//   }
+
+//   &[fold="1"]::before {
+//     content: $h5-content;
+//     @include before;
+//   }
+// }
+
+// // 六级标题
+// .protyle-wysiwyg [data-node-id].h6 {
+//   counter-increment: h6-section;
+//   color: #8064A2;
+//   display: flex;
+
+//   $h6-content: "#" counter(h1-section)"." counter(h2-section)"." counter(h3-section)"." counter(h4-section)"." counter(h5-section)"." counter(h6-section)".";
+
+//   &::before {
+//     content: $h6-content;
+//     padding-right: 0.2em;
+//   }
+
+//   &[fold="1"]::before {
+//     content: $h6-content;
+//     @include before;
+//   }
+// }
+
+// .sy__outline ul.b3-list.b3-list--background [data-subtype="h1"],
+// ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text {
+//   color: var(--mk-block-header-h1);
+// }
+
+// .sy__outline ul.b3-list.b3-list--background [data-subtype="h2"],
+// ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text {
+//   color: #2E75B5;
+// }
+
+// .sy__outline ul.b3-list.b3-list--background [data-subtype="h3"],
+// ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text {
+//   color: #BF9000;
+// }
+
+// .sy__outline ul.b3-list.b3-list--background [data-subtype="h4"],
+// ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text {
+//   color: #70AD47;
+// }
+
+// .sy__outline ul.b3-list.b3-list--background [data-subtype="h5"],
+// ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text {
+//   color: #E84C22;
+// }
+
+// .sy__outline ul.b3-list.b3-list--background [data-subtype="h6"],
+// ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text {
+//   color: #8064A2;
+// }

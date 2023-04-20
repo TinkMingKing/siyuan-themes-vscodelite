@@ -1,208 +1,45 @@
-/* 各级标题 */
+@use "sass:map";
 
-// 一级标题
-.protyle-wysiwyg [data-node-id].h1 {
+// 构建标题混合器
+@mixin header($number) {
+  .protyle-wysiwyg [data-node-id].h#{$number} {
+    color: var(--mk-block-header-h#{$number});
+    display: flex;
 
-  display: flex;
-  color: var(--mk-block-header-h1);
+    $header-content: "#" "\00A0";
 
-  &:not([fold="1"]):before{
-    content: "#";
-    border-right: 3px solid var(--mk-block-header-h1);
-    padding-right: 0.2em;
-    margin-right: 0.2em;
+    &::before {
+      content: $header-content;
+    }
+
+    &[fold="1"]::before {
+      content: $header-content;
+
+      // display: flex;
+      position: unset;
+      height: unset;
+      width: unset;
+      background: unset;
+      left: unset;
+      top: unset;
+      border-radius: unset;
+      margin-top: unset;
+    }
   }
 
-}
-
-.b3-typography h1 {
-
-  display: flex;
-  color: var(--mk-block-header-h1);
-
-  &:before{
-    content: "#";
-    border-right: 3px solid var(--mk-block-header-h1);
-    padding-right: 0.2em;
-    margin-right: 0.2em;
+  .sy__outline ul.b3-list.b3-list--background [data-subtype="h#{$number}"],
+  ul.b3-list.b3-list--background [data-subtype="h#{$number}"] .b3-list-item__text {
+    color: var(--mk-block-header-h#{$number});
   }
-
 }
 
-// 二级标题
-.protyle-wysiwyg [data-node-id].h2 {
-
-  display: flex;
-  color: #2E75B5;
-
-  &:not([fold="1"]):before{
-    content: "#";
-    border-right: 3px solid #2E75B5;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-.b3-typography h2 {
-
-  display: flex;
-  color: #2E75B5;
-
-  &:before{
-    content: "#";
-    border-right: 3px solid #2E75B5;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-// 三级标题
-.protyle-wysiwyg [data-node-id].h3 {
-
-  display: flex;
-  color: #BF9000;
-
-  &:not([fold="1"]):before{
-    content: "#";
-    border-right: 3px solid #BF9000;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-.b3-typography h3 {
-
-  display: flex;
-  color: #BF9000;
-
-  &:before{
-    content: "#";
-    border-right: 3px solid #BF9000;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-// 四级标题
-.protyle-wysiwyg [data-node-id].h4 {
-
-  display: flex;
-  color: #70AD47;
-
-  &:not([fold="1"]):before{
-    content: "#";
-    border-right: 3px solid #70AD47;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-.b3-typography h4 {
-
-  display: flex;
-  color: #70AD47;
-
-  &:before{
-    content: "#";
-    border-right: 3px solid #70AD47;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-// 五级标题
-.protyle-wysiwyg [data-node-id].h5 {
-
-  display: flex;
-  color: #E84C22;
-
-  &:not([fold="1"]):before{
-    content: "#";
-    border-right: 3px solid #E84C22;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-.b3-typography h5 {
-
-  display: flex;
-  color: #E84C22;
-
-  &:before{
-    content: "#";
-    border-right: 3px solid #E84C22;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-// 六级标题
-.protyle-wysiwyg [data-node-id].h6 {
-
-  display: flex;
-  color: #8064A2;
-
-  &:not([fold="1"]):before{
-    content: "#";
-    border-right: 3px solid #8064A2;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-.b3-typography h6 {
-
-  display: flex;
-  color: #8064A2;
-
-  &:before{
-    content: "#";
-    border-right: 3px solid #8064A2;
-    padding-right: 0.2em;
-    margin-right: 0.2em;
-  }
-
-}
-
-// 处理六级标题显示不统一
-.protyle-wysiwyg [data-node-id].h6 [spellcheck] {
-  min-height: auto;
-}
-
-.sy__outline ul.b3-list.b3-list--background [data-subtype="h2"],
-ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text{
-  color: #2E75B5;
-}
-
-.sy__outline ul.b3-list.b3-list--background [data-subtype="h3"],
-ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text{
-  color: #BF9000;
-}
-
-.sy__outline ul.b3-list.b3-list--background [data-subtype="h4"],
-ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text{
-  color: #70AD47;
-}
-
-.sy__outline ul.b3-list.b3-list--background [data-subtype="h5"],
-ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text{
-  color: #E84C22;
-}
-
-.sy__outline ul.b3-list.b3-list--background [data-subtype="h6"],
-ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text{
-  color: #8064A2;
-}
+// 使用标题混合器
+@include header(1);
+@include header(2);
+@include header(3);
+@include header(4);
+@include header(5);
+@include header(6);
 
 .protyle-title__input {
   text-align: center;
