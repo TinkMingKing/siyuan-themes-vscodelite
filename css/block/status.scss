@@ -1,0 +1,25 @@
+.status {
+    background-color: #3e78c9;
+    box-sizing: border-box;
+    z-index: 2;
+    height: 32px;
+    line-height: 32px;
+    border-top: .5px solid var(--b3-border-color);
+    padding: 0 5px;
+    color: #ffffff;
+    & *{
+        color: #ffffff;
+    }
+
+
+
+
+}
+
+#barDock:hover{
+    background-color: #5284c9 !important;
+}
+
+#statusHelp:hover{
+    background-color: #5284c9 !important;
+}

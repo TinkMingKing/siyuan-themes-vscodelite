@@ -1,0 +1,184 @@
+@use "sass:map";
+
+// 构建标题混合器
+// @mixin header($number) {
+//   .protyle-wysiwyg [data-node-id].h#{$number} {
+//     color: var(--mk-block-header-h#{$number});
+//     display: flex;
+
+//     $header-content: "#" "\00A0";
+
+//     &::before {
+//       content: $header-content;
+//     }
+
+//     &[fold="1"]::before {
+//       content: $header-content;
+
+//       // display: flex;
+//       position: unset;
+//       height: unset;
+//       width: unset;
+//       background: unset;
+//       left: unset;
+//       top: unset;
+//       border-radius: unset;
+//       margin-top: unset;
+//     }
+//   }
+
+//   .sy__outline ul.b3-list.b3-list--background [data-subtype="h#{$number}"],
+//   ul.b3-list.b3-list--background [data-subtype="h#{$number}"] .b3-list-item__text {
+//     color: var(--mk-block-header-h#{$number});
+//   }
+// }
+
+// // 使用标题混合器
+// @include header(1);
+// @include header(2);
+// @include header(3);
+// @include header(4);
+// @include header(5);
+// @include header(6);
+
+// .protyle-title__input {
+//   text-align: center;
+// }
+
+// .protyle-wysiwyg .h2>[spellcheck]:not(:empty)::after {
+//   content: "";
+//   position: absolute;
+//   float: left;
+//   margin-left: 5px;
+//   height: 0.16em;
+//   width: 0.16em;
+//   bottom: 0.76em;
+//   border-radius: 3px;
+//   background-color: var(--h2-list-graphic);
+//   opacity: 0.5;
+//   box-shadow: 0.25em 0.25em 0 0 var(--h2-list-graphic);
+// }
+
+.protyle-wysiwyg [data-node-id].h1 {
+  color: var(--mk-block-header-h1);
+  display: flex;
+
+  $header-content: "";
+
+  &::before {
+    // display: flex;
+    content: $header-content;
+    background-color: var(--mk-block-header-h1);
+    height: 0.45em;
+    width: 0.15em;
+    bottom: 0.5em;
+    margin-right: 0.2em;
+    border-radius: 3px;
+  }
+
+  &[fold="1"]::before {
+    content: $header-content;
+    // float: left;
+    height: 0.45em !important;
+    width: 0.15em;
+    bottom: 0.5em;
+    margin-right: 0.2em;
+    border-radius: 3px;
+    background-color: var(--mk-block-header-h1);
+
+    position: unset;
+    left: unset;
+    top: unset;
+    margin-top: unset;
+  }
+}
+
+.protyle-wysiwyg .h1>[spellcheck]:not(:empty)::after {
+  content: "";
+  position: absolute;
+  float: left;
+  margin-left: 5px;
+  height: 0.45em;
+  width: 0.15em;
+  bottom: 0.5em;
+  border-radius: 3px;
+  background-color: var(--mk-block-header-h1);
+}
+
+// .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h1>[*~spellcheck]::after{
+// 	bottom:0.2em;
+// }
+
+.protyle-wysiwyg .h2>[spellcheck]:not(:empty)::after {
+  content: "";
+  position: absolute;
+  float: left;
+  margin-left: 5px;
+  height: 0.16em;
+  width: 0.16em;
+  bottom: 0.76em;
+  border-radius: 3px;
+  background-color: var(--h2-list-graphic);
+  opacity: 0.5;
+  box-shadow: 0.25em 0.25em 0 0 var(--h2-list-graphic);
+}
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action~.h2>[spellcheck]::after {
+  bottom: 0.5em;
+}
+
+.protyle-wysiwyg .h3>[spellcheck]:not(:empty)::after {
+  content: "";
+  position: absolute;
+  float: left;
+  margin-left: 5px;
+  height: 0.16em;
+  width: 0.16em;
+  bottom: 0.62em;
+  border-radius: 3px;
+  background-color: var(--h3-list-graphic);
+  opacity: 0.5;
+  box-shadow: 0.25em 0.25em 0 0 var(--h3-list-graphic), 0 0.25em 0 0 var(--h3-list-graphic);
+}
+
+.protyle-wysiwyg .h4>[spellcheck]:not(:empty)::after {
+  content: "";
+  position: absolute;
+  float: left;
+  margin-left: 5px;
+  height: 0.15em;
+  width: 0.15em;
+  bottom: 0.68em;
+  border-radius: 3px;
+  background-color: var(--h4-list-graphic);
+  opacity: 0.5;
+  box-shadow: 0.25em 0.25em 0 0 var(--h4-list-graphic), 0 0.25em 0 0 var(--h4-list-graphic), 0.25em 0 0 0 var(--h4-list-graphic);
+}
+
+.protyle-wysiwyg .h5>[spellcheck]:not(:empty)::after {
+  content: "";
+  position: absolute;
+  float: left;
+  margin-left: 5px;
+  height: 0.15em;
+  width: 0.15em;
+  bottom: 0.8em;
+  border-radius: 3px;
+  background-color: var(--h5-list-graphic);
+  opacity: 0.5;
+  box-shadow: 0.25em 0.25em 0 0 var(--h5-list-graphic), 0 0.25em 0 0 var(--h5-list-graphic), 0.25em 0 0 0 var(--h5-list-graphic), 0 -0.25em 0 0 var(--h5-list-graphic);
+}
+
+.protyle-wysiwyg .h6>[spellcheck]:not(:empty)::after {
+  content: "";
+  position: absolute;
+  float: left;
+  margin-left: 5px;
+  height: 0.15em;
+  width: 0.15em;
+  bottom: 1em;
+  border-radius: 3px;
+  background-color: var(--h6-list-graphic);
+  opacity: 0.5;
+  box-shadow: 0.25em 0.25em 0 0 var(--h6-list-graphic), 0 0.25em 0 0 var(--h6-list-graphic), 0.25em 0 0 0 var(--h6-list-graphic), 0 -0.25em 0 0 var(--h6-list-graphic), 0.25em -0.25em 0 0 var(--h6-list-graphic);
+}

@@ -152,6 +152,28 @@ ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
   transition: all 200ms ease-out;
 }
 
+.status {
+  background-color: #3e78c9;
+  box-sizing: border-box;
+  z-index: 2;
+  height: 32px;
+  line-height: 32px;
+  border-top: 0.5px solid var(--b3-border-color);
+  padding: 0 5px;
+  color: #ffffff;
+}
+.status * {
+  color: #ffffff;
+}
+
+#barDock:hover {
+  background-color: #5284c9 !important;
+}
+
+#statusHelp:hover {
+  background-color: #5284c9 !important;
+}
+
 body.body--blur .toolbar {
   background: var(--mk-toolbar-background--blur);
 }
@@ -243,13 +265,10 @@ body.body--blur .protyle-wysiwyg *::selection {
   width: 15px;
 }
 .protyle-content::-webkit-scrollbar-track {
-  border-right: 1px solid var(--mk-protyle-content-scrollbar-track-border);
-  border-left: 1px solid var(--mk-protyle-content-scrollbar-track-border);
-  border-top: 1px solid var(--mk-protyle-content-scrollbar-track-border);
+  border: 1px solid var(--mk-protyle-content-scrollbar-track-border);
 }
 .protyle-content::-webkit-scrollbar-thumb {
   visibility: hidden;
-  pointer-events: none;
   border-radius: 0;
   background: var(--mk-protyle-content-scrollbar-thumb);
   box-shadow: none;
@@ -285,6 +304,13 @@ body.body--blur .protyle-wysiwyg *::selection {
 .sy__file div.fn__flex-1::-webkit-scrollbar-thumb:active {
   background: var(--mk-filetree-scrollbar-thumb--active);
 }
+.sy__file .b3-list--background .b3-list-item {
+  border-radius: unset;
+}
+.sy__file .b3-list-item {
+  padding: 1px 5px;
+  margin: unset;
+}
 
 .layout__resize--lr::after {
   visibility: hidden;
@@ -296,6 +322,10 @@ body.body--blur .protyle-wysiwyg *::selection {
 
 .dock#dockRight {
   border-left: none;
+}
+
+.dock#dockBottom {
+  border-bottom: none;
 }
 
 .layout-tab-bar.layout-tab-bar--readonly {

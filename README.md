@@ -13,6 +13,8 @@ Replicate the interface style of VSCode, fine-tune the layout and color scheme, 
 * 微调布局及配色 || Fine-tune layout and color scheme
 
 ## ChangeLog
+- V1.0.7
+  - 修改文档树和状态栏 || Modify filetree and status
 - V1.0.6
   - 改进标题样式 || Enhance title formatting
 - V1.0.5

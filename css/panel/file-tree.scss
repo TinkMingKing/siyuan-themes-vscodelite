@@ -53,6 +53,15 @@
             }
         }
     }
+
+    .b3-list--background .b3-list-item {
+        border-radius: unset;
+    }
+    
+    .b3-list-item {
+        padding: 1px 5px;
+        margin: unset;
+    }
 }
 
 // 拖动条
@@ -68,3 +77,23 @@
 .dock#dockRight{
     border-left: none;
 }
+
+.dock#dockBottom{
+    border-bottom: none;
+}
+
+// .dock__item {
+//     padding: unset;
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+//     color: var(--b3-theme-on-surface-light);
+//     display: flex;
+//     border-radius: unset;
+//     margin: unset;
+//     justify-content: center;
+// }
+
+// .dock svg {
+//     height: 24px;
+//     width: 24px;
+// }

@@ -57,15 +57,12 @@ body.body--blur{
 
     $scrollbar-track-border: 1px solid var(--mk-protyle-content-scrollbar-track-border);
     &::-webkit-scrollbar-track {
-        border-right: $scrollbar-track-border;
-        border-left: $scrollbar-track-border;
-        border-top: $scrollbar-track-border;
+        border: $scrollbar-track-border;
     }
 
     &::-webkit-scrollbar-thumb {
         visibility: hidden;
-        // opacity: 0;
-        pointer-events: none;
+        // opacity: 0 !important;
         border-radius: 0;
         background: var(--mk-protyle-content-scrollbar-thumb);
         box-shadow: none;
