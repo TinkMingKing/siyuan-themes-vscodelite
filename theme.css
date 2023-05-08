@@ -144,7 +144,7 @@ ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
 }
 
 .protyle-title__input {
-  text-align: center;
+  font-size: 2.5em;
 }
 
 /* 块标动画 */
@@ -285,12 +285,13 @@ body.body--blur .protyle-wysiwyg *::selection {
 }
 .sy__file div.fn__flex-1:hover::-webkit-scrollbar-thumb {
   visibility: visible;
+  opacity: 1;
 }
 .sy__file div.fn__flex-1::-webkit-scrollbar-track-piece {
   opacity: 0;
 }
 .sy__file div.fn__flex-1::-webkit-scrollbar-track {
-  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 .sy__file div.fn__flex-1::-webkit-scrollbar-thumb {
   visibility: hidden;
@@ -304,10 +305,11 @@ body.body--blur .protyle-wysiwyg *::selection {
 .sy__file div.fn__flex-1::-webkit-scrollbar-thumb:active {
   background: var(--mk-filetree-scrollbar-thumb--active);
 }
-.sy__file .b3-list--background .b3-list-item {
+.sy__file .b3-list--background {
   border-radius: unset;
 }
-.sy__file .b3-list-item {
+.sy__file .b3-list--background .b3-list-item {
+  border-radius: unset;
   padding: 1px 5px;
   margin: unset;
 }

@@ -15,7 +15,7 @@
             &::-webkit-scrollbar-thumb {
                 // background: #c1c1c1;
                 visibility: visible;
-                // opacity: 1;
+                opacity: 1;
 
             }
         }
@@ -32,7 +32,7 @@
         }
 
         &::-webkit-scrollbar-track {
-            opacity: 0;
+            background-color: rgba(0, 0, 0, 0);
         }
 
         &::-webkit-scrollbar-thumb {
@@ -54,14 +54,15 @@
         }
     }
 
-    .b3-list--background .b3-list-item {
+    .b3-list--background {
         border-radius: unset;
+        .b3-list-item {
+            border-radius: unset;
+            padding: 1px 5px;
+            margin: unset;
+        }
     }
-    
-    .b3-list-item {
-        padding: 1px 5px;
-        margin: unset;
-    }
+
 }
 
 // 拖动条
