@@ -9,11 +9,11 @@
 
 # 更新日志
 - V1.1.0
-  - 适配新版格式Adapt to the new format
+  - 适配新版格式
 - V1.0.7
-  - 修改文档树和状态栏 || Modify filetree and status
+  - 修改文档树和状态栏
 - V1.0.6
-  - 改进标题样式 || Enhance title formatting
+  - 改进标题样式
 - V1.0.5
-  - 重构代码，从纯CSS切换到SASS || Refactor the code and migrate from pure CSS to SASS
-  - 不使用JS || Avoid using JavaScript
+  - 重构代码，从纯CSS切换到SASS
+  - 不使用JS
