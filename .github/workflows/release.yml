@@ -28,5 +28,6 @@ jobs:
       
       - uses: ncipollo/release-action@v1
         with:
+          allowUpdates: true
           artifacts: "package.zip"
           token: ${{ secrets.TOKEN }}
