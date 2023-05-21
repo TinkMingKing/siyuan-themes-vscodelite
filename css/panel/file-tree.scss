@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .sy__file {
     // &:hover {
     //     div.fn__flex-1 {
@@ -14,7 +16,8 @@
 
             &::-webkit-scrollbar-thumb {
                 // background: #c1c1c1;
-                visibility: visible;
+                // visibility: visible;
+                background: var(--mk-filetree-scrollbar-thumb);
                 opacity: 1;
 
             }
@@ -36,12 +39,12 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            visibility: hidden;
+            // visibility: hidden;
             //无法设置透明度
             // opacity: 0;
             // transition: all .2s cubic-bezier(0, 0, .2, 1) 0ms, opacity .3s cubic-bezier(0, 0, 0.2, 1) 0ms;
             border-radius: 0;
-            background: var(--mk-filetree-scrollbar-thumb);
+            background: rgba(0,0,0,0);
             box-shadow: none;
 
             &:hover {
@@ -74,6 +77,12 @@
 .dock#dockLeft{
     border-right: none;
 }
+
+.dock{
+    background: var(--mk-dock-background);
+}
+
+// #2b2d30
 
 .dock#dockRight{
     border-left: none;

@@ -1,4 +1,4 @@
-@use "sass:map";
+@use "sass:color";
 
 // 构建标题混合器
 @mixin header($number) {
@@ -6,24 +6,24 @@
     color: var(--mk-block-header-h#{$number});
     display: flex;
 
-    $header-content: "#" "\00A0";
+    $header-content: "#";
 
     &::before {
       content: $header-content;
+      margin-right: 0.2em;
     }
 
     &[fold="1"]::before {
       content: $header-content;
 
       // display: flex;
-      position: unset;
-      height: unset;
+      position: static;
+      height: 100% !important;
       width: unset;
-      background: unset;
-      left: unset;
-      top: unset;
       border-radius: unset;
       margin-top: unset;
+      margin-right: 0.2em;
+      background: var(--mk-block-header-background-h#{$number});
     }
   }
 

@@ -8,6 +8,8 @@ Replicate the interface style of VSCode, fine-tune the layout and color scheme, 
 * Fine-tune layout and color scheme
 
 # ChangeLog
+- V1.1.1
+  - Optimized the title of the collapsed state
 - V1.1.0
   - Adapt to the new format
 - V1.0.7

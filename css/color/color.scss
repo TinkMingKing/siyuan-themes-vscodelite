@@ -18,6 +18,11 @@
     --mk-tabbar-background-color-item--readonly: #f3f3f3;
     --mk-tabbar-background-color-item--focus: #ffffff;
 
+    // dock
+    --mk-dock-background: #f3f3f3;
+    
+    // #f7f8fa
+
     // 编辑区
     --mk-protyle-wysiwyg--selection: #cddcf6;
     --mk-protyle-wysiwyg--selection--blur: #e6ebf1;
@@ -39,6 +44,13 @@
     --mk-block-header-h4: #70AD47;
     --mk-block-header-h5: #E84C22;
     --mk-block-header-h6: #8064A2;
+
+    --mk-block-header-background-h1: rgba(32, 33, 36, 0.2);
+    --mk-block-header-background-h2: rgba(46, 118, 181, 0.2);
+    --mk-block-header-background-h3: rgba(191, 143, 0, 0.2);
+    --mk-block-header-background-h4: rgba(112, 173, 71, 0.2);
+    --mk-block-header-background-h5: rgba(232, 77, 34, 0.2);
+    --mk-block-header-background-h6: rgba(128, 100, 162, 0.2);
 
 
 }
@@ -68,6 +80,10 @@
     --mk-tabbar-background-color: #2d2d2d;
     --mk-tabbar-background-color-item--readonly: #252526;
     --mk-tabbar-background-color-item--focus: #1e1e1e;
+
+    // dock
+    --mk-dock-background: #292929;
+    // #2b2d30
 
     // 编辑区
     --mk-protyle-wysiwyg--selection: #334e76;
