@@ -22,7 +22,7 @@ jobs:
           
       - name: package
         run: |
-          find ./ -name 'theme.json' -o -name 'icon.png' -o -name 'preview.png' -o -name 'README.md' -o -name 'README_zh_CN.md' -o -name 'theme.css' -o -name 'themes.css.map'| xargs zip package.zip
+          find ./ -name 'theme.json' -o -name 'icon.png' -o -name 'preview.png' -o -name 'README.md' -o -name 'README_zh_CN.md' -o -name 'theme.css' -o -name 'theme.css.map'| xargs zip package.zip
       
       - uses: ncipollo/release-action@v1
         with:
