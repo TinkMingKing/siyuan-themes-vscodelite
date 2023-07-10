@@ -4,7 +4,8 @@
     z-index: 2;
     height: 32px;
     line-height: 32px;
-    border-top: .5px solid var(--b3-border-color);
+    // border-top: .5px solid var(--b3-border-color);
+    border-top: unset;
     padding: 0 5px;
     color: #ffffff;
     & *{

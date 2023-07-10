@@ -7,8 +7,11 @@ body.body--blur{
         }
 
         .toolbar__text{
-            color: var(--mk-toolbar--blur-item);
-            // font-weight: bold;
+            color: var(--mk-toolbar-text--blur);
+        }
+    
+        .toolbar__svg{
+            color: var(--mk-toolbar-svg--blur);
         }
         
         .toolbar__item{
@@ -27,8 +30,12 @@ body.body--blur{
     }
 
     .toolbar__text{
-        color: var(--mk-toolbar-item);
+        color: var(--mk-toolbar-text);
         font-weight: bold;
+    }
+
+    .toolbar__svg{
+        color: var(--mk-toolbar-svg);
     }
     
     .toolbar__item{
@@ -36,7 +43,14 @@ body.body--blur{
     }
 }
 
-.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover,
-.toolbar__item--active{
+.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover{
     background-color: var(--mk-toolbar-item--hover);
+}
+
+#barWorkspace:hover{
+    background-color: var(--mk-toolbar-item-barWorkspace--hover);
+}
+
+.toolbar__item--active{
+    background-color: var(--mk-toolbar-item--active);
 }

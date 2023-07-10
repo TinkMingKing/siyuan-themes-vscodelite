@@ -158,7 +158,7 @@ ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
   z-index: 2;
   height: 32px;
   line-height: 32px;
-  border-top: 0.5px solid var(--b3-border-color);
+  border-top: unset;
   padding: 0 5px;
   color: #ffffff;
 }
@@ -181,7 +181,10 @@ body.body--blur .toolbar #drag {
   color: var(--mk-toolbar--blur-item);
 }
 body.body--blur .toolbar .toolbar__text {
-  color: var(--mk-toolbar--blur-item);
+  color: var(--mk-toolbar-text--blur);
+}
+body.body--blur .toolbar .toolbar__svg {
+  color: var(--mk-toolbar-svg--blur);
 }
 body.body--blur .toolbar .toolbar__item {
   color: var(--mk-toolbar--blur-item);
@@ -195,16 +198,26 @@ body.body--blur .toolbar .toolbar__item {
   color: var(--mk-toolbar-item);
 }
 .toolbar .toolbar__text {
-  color: var(--mk-toolbar-item);
+  color: var(--mk-toolbar-text);
   font-weight: bold;
+}
+.toolbar .toolbar__svg {
+  color: var(--mk-toolbar-svg);
 }
 .toolbar .toolbar__item {
   color: var(--mk-toolbar-item);
 }
 
-.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover,
-.toolbar__item--active {
+.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover {
   background-color: var(--mk-toolbar-item--hover);
+}
+
+#barWorkspace:hover {
+  background-color: var(--mk-toolbar-item-barWorkspace--hover);
+}
+
+.toolbar__item--active {
+  background-color: var(--mk-toolbar-item--active);
 }
 
 /* 隐藏非必要元素 */
@@ -240,22 +253,6 @@ body.body--blur .toolbar .toolbar__item {
 /*隐藏块滚动条*/
 .protyle-scroll {
   display: none;
-}
-
-.protyle-wysiwyg *::-moz-selection {
-  background-color: var(--mk-protyle-wysiwyg--selection);
-}
-
-.protyle-wysiwyg *::selection {
-  background-color: var(--mk-protyle-wysiwyg--selection);
-}
-
-body.body--blur .protyle-wysiwyg *::-moz-selection {
-  background-color: var(--mk-protyle-wysiwyg--selection--blur);
-}
-
-body.body--blur .protyle-wysiwyg *::selection {
-  background-color: var(--mk-protyle-wysiwyg--selection--blur);
 }
 
 .protyle-content:hover::-webkit-scrollbar-thumb {
@@ -336,6 +333,45 @@ body.body--blur .protyle-wysiwyg *::selection {
   border-bottom: none;
 }
 
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus), .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+  background-color: var(--mk-filetree-list--hover);
+}
+
+.dock__item {
+  justify-content: center;
+  border-radius: unset;
+  margin: 5px;
+  color: var(--mk-dock-item-color);
+}
+.dock__item svg {
+  height: 20px;
+  width: 20px;
+}
+
+.dock__item:hover, .dock__item--active {
+  background-color: unset;
+}
+.dock__item:hover svg, .dock__item--active svg {
+  color: var(--mk-dock-item-svg-color--hover);
+}
+
+body.body--blur .dock__item--activefocus,
+.dock__item--activefocus {
+  color: unset !important;
+  background-color: unset !important;
+}
+
+.block__logo svg {
+  display: none;
+}
+
+.block__logo {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: unset;
+  margin-left: 8px;
+}
+
 .layout-tab-bar.layout-tab-bar--readonly {
   background-color: var(--mk-tabbar-background-color-item--readonly);
   border-bottom: none;
@@ -375,13 +411,22 @@ body.body--blur .layout-tab-bar .item.item--focus:after {
   --mk-toolbar--blur-item: #7b7b7b;
   --mk-toolbar-item: #333333;
   --mk-toolbar-item--hover: #bfbfbf;
+  --mk-toolbar-item--active: #437f5e;
+  --mk-toolbar-item-barWorkspace--hover: #436e5e;
+  --mk-toolbar-text: #ffffff;
+  --mk-toolbar-svg: var(--mk-toolbar-text);
+  --mk-toolbar-text--blur: rgba(255, 255, 255, 0.6);
+  --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
   --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
   --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
   --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+  --mk-filetree-list--hover: #e5e6f0;
   --mk-tabbar-background-color: #ececec;
   --mk-tabbar-background-color-item--readonly: #f3f3f3;
   --mk-tabbar-background-color-item--focus: #ffffff;
-  --mk-dock-background: #f3f3f3;
+  --mk-dock-background: #2c2c2c;
+  --mk-dock-item-color: #727272;
+  --mk-dock-item-svg-color--hover: #f4f4f4;
   --mk-protyle-wysiwyg--selection: #cddcf6;
   --mk-protyle-wysiwyg--selection--blur: #e6ebf1;
   --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
@@ -411,14 +456,23 @@ body.body--blur .layout-tab-bar .item.item--focus:after {
   --mk-toolbar-background--blur: #323233;
   --mk-toolbar--blur-item: #8e8e8e;
   --mk-toolbar-item: #cccccc;
-  --mk-toolbar-item--hover: #6f6f6f;
+  --mk-toolbar-item--hover: #565656;
+  --mk-toolbar-item--active: #437f5e;
+  --mk-toolbar-item-barWorkspace--hover: #436e5e;
+  --mk-toolbar-text: #ffffff;
+  --mk-toolbar-svg: var(--mk-toolbar-text);
+  --mk-toolbar-text--blur: rgba(255, 255, 255, 0.6);
+  --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
   --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
   --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
   --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+  --mk-filetree-list--hover: #37373d;
   --mk-tabbar-background-color: #2d2d2d;
   --mk-tabbar-background-color-item--readonly: #252526;
   --mk-tabbar-background-color-item--focus: #1e1e1e;
-  --mk-dock-background: #292929;
+  --mk-dock-background: #333333;
+  --mk-dock-item-color: #727272;
+  --mk-dock-item-svg-color--hover: #f4f4f4;
   --mk-protyle-wysiwyg--selection: #334e76;
   --mk-protyle-wysiwyg--selection--blur: #3b3d41;
   --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);

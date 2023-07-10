@@ -15,9 +15,9 @@
 // }
 
 // 选中文本颜色
-.protyle-wysiwyg *::selection {
-    background-color: var(--mk-protyle-wysiwyg--selection);
-}
+// .protyle-wysiwyg *::selection {
+//     background-color: var(--mk-protyle-wysiwyg--selection);
+// }
 
 // .layout__center{
 //     // div.layout__wnd--active[data-type="wnd"][data-id]{
@@ -34,11 +34,11 @@
 // }
 
 // 选中文本失去焦点颜色
-body.body--blur{
-    .protyle-wysiwyg *::selection {
-        background-color: var(--mk-protyle-wysiwyg--selection--blur);
-    }
-}
+// body.body--blur{
+//     .protyle-wysiwyg *::selection {
+//         background-color: var(--mk-protyle-wysiwyg--selection--blur);
+//     }
+// }
 
 
 .protyle-content {

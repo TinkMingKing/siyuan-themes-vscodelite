@@ -7,11 +7,18 @@
     --mk-toolbar--blur-item: #7b7b7b;
     --mk-toolbar-item: #333333;
     --mk-toolbar-item--hover: #bfbfbf;
+    --mk-toolbar-item--active: #437f5e;
+    --mk-toolbar-item-barWorkspace--hover: #436e5e;
+    --mk-toolbar-text: #ffffff;
+    --mk-toolbar-svg: var(--mk-toolbar-text);
+    --mk-toolbar-text--blur: rgba(255, 255, 255, 0.6);
+    --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
 
     // file-tree 文档树
     --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
     --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
     --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+    --mk-filetree-list--hover: #e5e6f0;
 
     // tabbar 标签栏
     --mk-tabbar-background-color: #ececec;
@@ -19,10 +26,10 @@
     --mk-tabbar-background-color-item--focus: #ffffff;
 
     // dock
-    --mk-dock-background: #f3f3f3;
+    --mk-dock-background: #2c2c2c;
+    --mk-dock-item-color: #727272;
+    --mk-dock-item-svg-color--hover: #f4f4f4;
     
-    // #f7f8fa
-
     // 编辑区
     --mk-protyle-wysiwyg--selection: #cddcf6;
     --mk-protyle-wysiwyg--selection--blur: #e6ebf1;
@@ -69,12 +76,19 @@
     --mk-toolbar-background--blur: #323233;
     --mk-toolbar--blur-item: #8e8e8e;
     --mk-toolbar-item: #cccccc;
-    --mk-toolbar-item--hover: #6f6f6f;
+    --mk-toolbar-item--hover: #565656;
+    --mk-toolbar-item--active: #437f5e;
+    --mk-toolbar-item-barWorkspace--hover: #436e5e;
+    --mk-toolbar-text: #ffffff;
+    --mk-toolbar-svg: var(--mk-toolbar-text);
+    --mk-toolbar-text--blur: rgba(255, 255, 255, 0.6);
+    --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
 
     // file-tree 文档树
     --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
     --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
     --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
+    --mk-filetree-list--hover: #37373d;
 
     // tabbar 标签栏
     --mk-tabbar-background-color: #2d2d2d;
@@ -82,8 +96,9 @@
     --mk-tabbar-background-color-item--focus: #1e1e1e;
 
     // dock
-    --mk-dock-background: #292929;
-    // #2b2d30
+    --mk-dock-background: #333333;
+    --mk-dock-item-color: #727272;
+    --mk-dock-item-svg-color--hover: #f4f4f4;
 
     // 编辑区
     --mk-protyle-wysiwyg--selection: #334e76;
