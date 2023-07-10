@@ -54,3 +54,7 @@ body.body--blur{
 .toolbar__item--active{
     background-color: var(--mk-toolbar-item--active);
 }
+
+#closeWindow:hover {
+    color: white;
+}

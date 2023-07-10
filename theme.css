@@ -220,6 +220,10 @@ body.body--blur .toolbar .toolbar__item {
   background-color: var(--mk-toolbar-item--active);
 }
 
+#closeWindow:hover {
+  color: white;
+}
+
 /* 隐藏非必要元素 */
 /* 隐藏右栏左侧线 */
 /* .dock#dockLeft {
